@@ -13,7 +13,7 @@ debt.addEventListener('input', calcDebt);
 
 function calcDebt() {
     collectTypeInp.forEach((el) => {
-        if (el.checked == true && el.id == "property") {
+        if (el.checked == true && el.id == "property" && debt.value != NaN) {
             if ((debt.value * 0.02) <= 10 * minWage) {
                 charge.innerText = (debt.value * 0.02).toFixed(2);
             } else if ((debt.value * 0.02) > 10 * minWage){
@@ -28,6 +28,8 @@ currency.addEventListener('change', toggleForm);
 function toggleForm() {
     formDebtorType.classList.toggle('hide');
     formDebt.classList.toggle('hide');
+    charge.innerText = '';
+    debt.value = '';
 }
 
 company.addEventListener('change', function () {
