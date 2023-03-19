@@ -6,5 +6,97 @@
 }
 
 .hide {
-  display: none;
+  display: none !important;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form {
+  width: 400px;
+  border: 1px solid rgb(113, 54, 2);
+}
+.form > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px;
+}
+.form .form__header {
+  text-align: center;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgb(113, 54, 2);
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.form input[type=text], .form input[type=number] {
+  width: 250px;
+  height: 20px;
+  padding: 10px;
+}
+.form #charge {
+  font-weight: 700;
+}
+.form .form__typeCollect {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.form .form__typeCollect div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.form__debtorType {
+  width: 85%;
+  border-top: 1px solid rgb(113, 54, 2);
+  margin: auto;
+}
+.form__debtorType div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.form__footer input[type=button] {
+  background: rgb(113, 54, 2);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=radio] {
+  margin-left: 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
 }

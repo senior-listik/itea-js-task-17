@@ -17,7 +17,7 @@ function calcDebt() {
             if ((debt.value * 0.02) <= 10 * minWage) {
                 charge.innerText = (debt.value * 0.02).toFixed(2);
             } else if ((debt.value * 0.02) > 10 * minWage){
-                charge.innerText = 10 * minWage + 'грн';
+                charge.innerText = 10 * minWage + ' грн';
             }
         }
     })
@@ -33,10 +33,10 @@ function toggleForm() {
 }
 
 company.addEventListener('change', function () {
-    charge.innerText = 2 * minWage + 'грн';
+    charge.innerText = 2 * minWage + ' грн';
 })
 person.addEventListener('change', function () {
-    charge.innerText = minWage + 'грн';
+    charge.innerText = minWage + ' грн';
 })
 
 property.addEventListener('change', toggleForm);

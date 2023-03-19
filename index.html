@@ -10,7 +10,7 @@
 <body>
     <div class="wrapper">
         <div class="form">
-            <div class="form__header"></div>
+            <div class="form__header">Форма розрахунку платежу</div>
             <div class="form__name">
                 <span>ПІБ</span><input type="text">
             </div>
@@ -18,12 +18,16 @@
                 <span>Адреса</span><input type="text">
             </div>
             <div class="form__typeCollect">
+                <div>
                 <span>Майнове</span><input type="radio" name="collectType" checked id="property" class="collectType">
+                </div>
+                <div>
                 <span>Не майнове</span><input type="radio" name="collectType" id="currency" class="collectType">
+                </div>
             </div>
             <div class="form__debtorType hide" >
-                <div><span>Фізична особв</span><input type="radio"  id="person" name="debtorType"></div>
-                <div><span>Юридична особв</span><input type="radio" id="company" name="debtorType"></div>
+                <div><span>Фізична особа    </span><input type="radio"  id="person" name="debtorType"></div>
+                <div><span>Юридична особа</span><input type="radio" id="company" name="debtorType"></div>
             </div>
             <div class="form__debt">
                 <span>Сума</span><input type="number" id="debt">
