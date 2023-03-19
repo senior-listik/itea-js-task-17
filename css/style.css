@@ -20,11 +20,13 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background: url(../img/bg.jpg) 50%/cover no-repeat;
 }
 
 .form {
   width: 400px;
   border: 1px solid rgb(113, 54, 2);
+  background: rgba(255, 255, 255, 0.477);
 }
 .form > div {
   display: -webkit-box;
