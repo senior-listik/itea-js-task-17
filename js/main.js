@@ -14,6 +14,7 @@ const bill = document.querySelector('#bill');
 const name = document.querySelector('#name');
 const address = document.querySelector('#address');
 
+
 // commission calculation when entering the amount
 debt.addEventListener('input', calcDebt);
 
@@ -39,27 +40,39 @@ function toggleForm() {
     formDebt.classList.toggle('hide');
     charge.innerText = '';
     debt.value = '';
+    localStorage.setItem('debt', '');
 }
 
 company.addEventListener('change', function () {
-    charge.innerText = 2 * minWage + ' грн';
+    commission = 2 * minWage + ' грн';
+    charge.innerText = commission;
 })
 person.addEventListener('change', function () {
-    charge.innerText = minWage + ' грн';
+    commission = minWage + ' грн';
+    charge.innerText = commission;
 })
 
-
-
 // creating a receipt by click
-bill.addEventListener('click', createBill);
+
+    bill.addEventListener('click', createBill);
+
 document.body.addEventListener('keydown', pressKeyEnter);
 
 function createBill() {
-    localStorage.setItem('name', name.value);
-    localStorage.setItem('address', address.value);
-    localStorage.setItem('debt', debt.value);
-    localStorage.setItem('charge', commission);
+ 
+        localStorage.setItem('name', name.value);
+        localStorage.setItem('address', address.value);
+        localStorage.setItem('debt', debt.value);
+        localStorage.setItem('charge', commission);
+
+        name.value = '';
+    address.value = '';
+    debt.value = '';
+    charge.innerText = '';
+    commission = '';
+
 }
+
 // creating a receipt by pressing the enter key
 function pressKeyEnter(el) {
     if (el.keyCode == 13) {
